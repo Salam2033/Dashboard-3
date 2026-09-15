@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard 3 — اتاق فکر راهبردی</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#eef2ff;font-family:Tahoma,Arial,sans-serif}
+header{padding:28px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #202943;background:#0e1529}
+h1,h2,p{margin:0}
+header h1{font-size:28px}
+header p{color:#8e9ab7;margin-top:6px}
+.status{color:#a8b4ce}
+.status span{display:inline-block;width:9px;height:9px;border-radius:50%;background:#55d98a;margin-left:7px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 6%}
+.cards article,.panel{background:#111a30;border:1px solid #222d48;border-radius:16px}
+.cards article{padding:20px}
+.cards b,.cards small{display:block}
+.cards b{color:#aab5cf}
+.cards strong{font-size:28px;margin:14px 0 5px;display:block}
+.cards small{color:#71809f}
+.grid{padding:0 6% 35px;display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
+.panel{padding:20px}
+.wide{grid-column:1/-1}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.panel-head h2{font-size:18px}
+.panel-head span{font-size:12px;color:#7382a1}
+.mapbox{height:300px;border-radius:12px;position:relative;overflow:hidden;background:radial-gradient(circle at 55% 45%,#263b61,#15223c 45%,#0e172b)}
+.mapbox:before{content:"";position:absolute;inset:25px;background:repeating-linear-gradient(0deg,transparent 0 39px,#263550 40px),repeating-linear-gradient(90deg,transparent 0 55px,#263550 56px);opacity:.35}
+.region{position:absolute;padding:12px 16px;border:1px solid #5d739e;border-radius:10px;background:#1b2b49;font-size:12px}
+.r1{right:32%;top:35%}.r2{right:47%;top:28%}.r3{right:56%;top:17%}.r4{right:30%;bottom:23%}.r5{right:51%;bottom:10%}.r6{right:67%;top:32%}
+.note{color:#71809f;font-size:11px;margin-top:12px}
+.list>div{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #202a42}
+.list>div:last-child{border:0}
+.list i{font-style:normal;color:#7e8dab}
+.list span{flex:1}
+.list em{font-style:normal;font-size:11px;color:#b8c4dc}
+.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenarios div{padding:17px;border:1px solid #263451;border-radius:12px}
+.scenarios p{color:#aab5cf;font-size:13px;margin:10px 0}
+.scenarios label{font-size:11px;color:#7e8dab}
+.sources{display:flex;flex-wrap:wrap;gap:10px}
+.sources span{padding:11px 15px;border-radius:10px;background:#18233b;color:#b7c3dc}
+footer{text-align:center;color:#596783;padding:10px 6% 30px;font-size:11px}
+@media(max-width:800px){
+.cards{grid-template-columns:repeat(2,1fr)}
+.grid{grid-template-columns:1fr}
+.wide{grid-column:auto}
+.scenarios{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+<div><h1>داشبورد ۳</h1><p>اتاق فکر راهبردی خاورمیانه</p></div>
+<div class="status"><span></span> سامانه آنلاین</div>
+</header>
+<main>
+<section class="cards">
+<article><b>سطح ریسک منطقه</b><strong>بالا</strong><small>ارزیابی اولیه</small></article>
+<article><b>تحولات مهم</b><strong>۱۲</strong><small>رویدادهای پایش‌شده</small></article>
+<article><b>کشورهای پایش</b><strong>۱۸</strong><small>داده عمومی</small></article>
+<article><b>سناریوها</b><strong>۴</strong><small>سناریوهای راهبردی</small></article>
+</section>
+<section class="grid">
+<div class="panel map">
+<div class="panel-head"><h2>نقشه تحولات منطقه</h2><span>نمای تحلیلی</span></div>
+<div class="mapbox">
+<div class="region r1">ایران</div><div class="region r2">عراق</div>
+<div class="region r3">سوریه</div><div class="region r4">عربستان</div>
+<div class="region r5">یمن</div><div class="region r6">اسرائیل</div>
+</div>
+<p class="note">این نقشه برای تحلیل راهبردی و پایش اطلاعات عمومی است و موقعیت عملیاتی یا هدف‌گیری نظامی ارائه نمی‌کند.</p>
+</div>
+<div class="panel">
+<div class="panel-head"><h2>محورهای پایش</h2><span>به‌روزرسانی دستی</span></div>
+<div class="list">
+<div><i>۱</i><span>تحولات سیاسی و دیپلماتیک</span><em>بالا</em></div>
+<div><i>۲</i><span>اقتصاد، انرژی و بازارها</span><em>متوسط</em></div>
+<div><i>۳</i><span>امنیت منطقه‌ای</span><em>بالا</em></div>
+<div><i>۴</i><span>رسانه و افکار عمومی</span><em>متوسط</em></div>
+</div>
+</div>
+<div class="panel wide">
+<div class="panel-head"><h2>سناریوهای راهبردی</h2><span>نسخه ۱.۰</span></div>
+<div class="scenarios">
+<div><b>سناریوی A</b><p>کاهش تنش و افزایش مسیرهای دیپلماتیک</p><label>احتمال: متوسط</label></div>
+<div><b>سناریوی B</b><p>تداوم فشار و رقابت چندلایه منطقه‌ای</p><label>احتمال: بالا</label></div>
+<div><b>سناریوی C</b><p>شوک اقتصادی یا انرژی با پیامد منطقه‌ای</p><label>احتمال: متوسط</label></div>
+</div>
+</div>
+<div class="panel wide">
+<div class="panel-head"><h2>منابع تحلیلی</h2><span>قابل اتصال به API</span></div>
+<div class="sources">
+<span>اندیشکده‌ها</span><span>خبرگزاری‌ها</span><span>مراکز پژوهشی</span><span>منابع اسرائیلی</span><span>منابع بین‌المللی</span>
+</div>
+</div>
+</section>
+</main>
+<footer>Dashboard 3 · Strategic Think Tank · Public-source analysis</footer>
+</body>
+</html>

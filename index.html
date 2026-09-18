@@ -1,103 +1,16 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dashboard 3 — اتاق فکر راهبردی</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Strategic Studio — وبلاگ و مرکز تحلیل</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b1020;color:#eef2ff;font-family:Tahoma,Arial,sans-serif}
-header{padding:28px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #202943;background:#0e1529}
-h1,h2,p{margin:0}
-header h1{font-size:28px}
-header p{color:#8e9ab7;margin-top:6px}
-.status{color:#a8b4ce}
-.status span{display:inline-block;width:9px;height:9px;border-radius:50%;background:#55d98a;margin-left:7px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 6%}
-.cards article,.panel{background:#111a30;border:1px solid #222d48;border-radius:16px}
-.cards article{padding:20px}
-.cards b,.cards small{display:block}
-.cards b{color:#aab5cf}
-.cards strong{font-size:28px;margin:14px 0 5px;display:block}
-.cards small{color:#71809f}
-.grid{padding:0 6% 35px;display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
-.panel{padding:20px}
-.wide{grid-column:1/-1}
-.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.panel-head h2{font-size:18px}
-.panel-head span{font-size:12px;color:#7382a1}
-.mapbox{height:300px;border-radius:12px;position:relative;overflow:hidden;background:radial-gradient(circle at 55% 45%,#263b61,#15223c 45%,#0e172b)}
-.mapbox:before{content:"";position:absolute;inset:25px;background:repeating-linear-gradient(0deg,transparent 0 39px,#263550 40px),repeating-linear-gradient(90deg,transparent 0 55px,#263550 56px);opacity:.35}
-.region{position:absolute;padding:12px 16px;border:1px solid #5d739e;border-radius:10px;background:#1b2b49;font-size:12px}
-.r1{right:32%;top:35%}.r2{right:47%;top:28%}.r3{right:56%;top:17%}.r4{right:30%;bottom:23%}.r5{right:51%;bottom:10%}.r6{right:67%;top:32%}
-.note{color:#71809f;font-size:11px;margin-top:12px}
-.list>div{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #202a42}
-.list>div:last-child{border:0}
-.list i{font-style:normal;color:#7e8dab}
-.list span{flex:1}
-.list em{font-style:normal;font-size:11px;color:#b8c4dc}
-.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.scenarios div{padding:17px;border:1px solid #263451;border-radius:12px}
-.scenarios p{color:#aab5cf;font-size:13px;margin:10px 0}
-.scenarios label{font-size:11px;color:#7e8dab}
-.sources{display:flex;flex-wrap:wrap;gap:10px}
-.sources span{padding:11px 15px;border-radius:10px;background:#18233b;color:#b7c3dc}
-footer{text-align:center;color:#596783;padding:10px 6% 30px;font-size:11px}
-@media(max-width:800px){
-.cards{grid-template-columns:repeat(2,1fr)}
-.grid{grid-template-columns:1fr}
-.wide{grid-column:auto}
-.scenarios{grid-template-columns:1fr}
-}
-</style>
-</head>
+*{box-sizing:border-box}body{margin:0;background:#020b1d;color:#fff;font-family:Tahoma,Arial,sans-serif}body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 70% 15%,#084b91 0,#031f45 34%,#010713 75%)}body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.28;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:95px 95px}a{text-decoration:none;color:inherit}.top{border-bottom:1px solid #1769aa;background:rgba(2,12,29,.95);position:sticky;top:0;z-index:10}.topin{max-width:1180px;margin:auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:23px;font-weight:800}.brand small{display:block;font-size:11px;color:#82caff;margin-top:4px}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{padding:9px 12px;border-radius:10px;color:#d9efff;font-size:13px}.nav a:hover{background:#0b4779}.wrap{max-width:1180px;margin:auto;padding:25px 18px 55px}.hero{border:1px solid #1b82d0;border-radius:24px;min-height:390px;padding:42px;position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(2,18,43,.97),rgba(4,49,88,.75));box-shadow:0 0 40px rgba(0,130,255,.15)}.heroText{position:relative;z-index:3;max-width:560px}.hero h1{font-size:40px;margin:0 0 12px}.hero p{font-size:17px;line-height:2;color:#cde9ff;margin:0 0 22px}.btn{display:inline-block;background:#0878c8;border:1px solid #48baff;border-radius:11px;padding:11px 18px;font-size:14px}.btn.green{background:#0ca56a;border-color:#42e5a1}.earth{position:absolute;right:15%;top:72px;width:270px;height:270px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#d6f6ff 0 4%,#42c2ff 13%,#0879c5 35%,#064b86 58%,#011b37 78%);box-shadow:inset -35px -30px 55px #000c,0 0 48px #159dff}.earth:after{content:"";position:absolute;inset:9px;border-radius:50%;background:radial-gradient(ellipse at 30% 38%,rgba(40,181,100,.95) 0 9%,transparent 10%),radial-gradient(ellipse at 58% 60%,rgba(39,178,97,.95) 0 11%,transparent 12%),radial-gradient(ellipse at 70% 33%,rgba(35,173,96,.95) 0 7%,transparent 8%),radial-gradient(ellipse at 43% 76%,rgba(42,185,105,.85) 0 6%,transparent 7%)}.orbit{position:absolute;border:2px solid #36b7ff;border-radius:50%;width:410px;height:150px;right:7%;top:145px;transform:rotate(-18deg);box-shadow:0 0 15px #168ee0}.orbit.o2{width:380px;height:225px;right:10%;top:92px;transform:rotate(34deg);border-color:#39dcff}.sat{position:absolute;border:1px solid #35c3ff;background:#06223e;border-radius:10px;padding:9px 12px;font-size:11px;box-shadow:0 0 16px #087ec6}.s1{right:3%;top:48px}.s2{right:45%;top:18px}.s3{right:43%;bottom:22px}.s4{right:2%;bottom:55px}.latest{margin:22px 0}.latest h2,.sectionTitle{font-size:22px;margin:0 0 14px}.posts{display:grid;grid-template-columns:2fr 1fr 1fr;gap:15px}.post{background:linear-gradient(145deg,rgba(7,36,65,.95),rgba(3,19,39,.96));border:1px solid #155e99;border-radius:18px;overflow:hidden}.post .pic{height:145px;background:radial-gradient(circle at 50% 50%,#0e74b8,#062b50 52%,#020d20)}.post .body{padding:18px}.post h3{margin:0 0 9px;font-size:18px}.post p{color:#bdd8ec;line-height:1.85;font-size:13px;margin:0 0 14px}.tag{display:inline-block;padding:5px 9px;border-radius:8px;background:#0c5788;color:#dff4ff;font-size:10px}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.feature{padding:21px;border:1px solid #145b91;border-radius:17px;background:rgba(4,27,50,.9)}.feature h3{margin:0 0 8px}.feature p{color:#bcd6ea;line-height:1.8;margin:0 0 13px;font-size:13px}.footer{text-align:center;color:#84a7c0;font-size:11px;margin-top:30px}@media(max-width:800px){.topin{align-items:flex-start;flex-direction:column}.nav{overflow:auto;flex-wrap:nowrap;width:100%}.hero{min-height:570px;padding:26px}.hero h1{font-size:29px}.earth{width:230px;height:230px;right:9%;top:285px}.orbit{width:320px;right:0;top:330px}.orbit.o2{width:300px;right:4%;top:295px}.posts,.features{grid-template-columns:1fr}}
+</style></head>
 <body>
-<header>
-<div><h1>داشبورد ۳</h1><p>اتاق فکر راهبردی خاورمیانه</p></div>
-<div class="status"><span></span> سامانه آنلاین</div>
-</header>
-<main>
-<section class="cards">
-<article><b>سطح ریسک منطقه</b><strong>بالا</strong><small>ارزیابی اولیه</small></article>
-<article><b>تحولات مهم</b><strong>۱۲</strong><small>رویدادهای پایش‌شده</small></article>
-<article><b>کشورهای پایش</b><strong>۱۸</strong><small>داده عمومی</small></article>
-<article><b>سناریوها</b><strong>۴</strong><small>سناریوهای راهبردی</small></article>
-</section>
-<section class="grid">
-<div class="panel map">
-<div class="panel-head"><h2>نقشه تحولات منطقه</h2><span>نمای تحلیلی</span></div>
-<div class="mapbox">
-<div class="region r1">ایران</div><div class="region r2">عراق</div>
-<div class="region r3">سوریه</div><div class="region r4">عربستان</div>
-<div class="region r5">یمن</div><div class="region r6">اسرائیل</div>
-</div>
-<p class="note">این نقشه برای تحلیل راهبردی و پایش اطلاعات عمومی است و موقعیت عملیاتی یا هدف‌گیری نظامی ارائه نمی‌کند.</p>
-</div>
-<div class="panel">
-<div class="panel-head"><h2>محورهای پایش</h2><span>به‌روزرسانی دستی</span></div>
-<div class="list">
-<div><i>۱</i><span>تحولات سیاسی و دیپلماتیک</span><em>بالا</em></div>
-<div><i>۲</i><span>اقتصاد، انرژی و بازارها</span><em>متوسط</em></div>
-<div><i>۳</i><span>امنیت منطقه‌ای</span><em>بالا</em></div>
-<div><i>۴</i><span>رسانه و افکار عمومی</span><em>متوسط</em></div>
-</div>
-</div>
-<div class="panel wide">
-<div class="panel-head"><h2>سناریوهای راهبردی</h2><span>نسخه ۱.۰</span></div>
-<div class="scenarios">
-<div><b>سناریوی A</b><p>کاهش تنش و افزایش مسیرهای دیپلماتیک</p><label>احتمال: متوسط</label></div>
-<div><b>سناریوی B</b><p>تداوم فشار و رقابت چندلایه منطقه‌ای</p><label>احتمال: بالا</label></div>
-<div><b>سناریوی C</b><p>شوک اقتصادی یا انرژی با پیامد منطقه‌ای</p><label>احتمال: متوسط</label></div>
-</div>
-</div>
-<div class="panel wide">
-<div class="panel-head"><h2>منابع تحلیلی</h2><span>قابل اتصال به API</span></div>
-<div class="sources">
-<span>اندیشکده‌ها</span><span>خبرگزاری‌ها</span><span>مراکز پژوهشی</span><span>منابع اسرائیلی</span><span>منابع بین‌المللی</span>
-</div>
-</div>
-</section>
-</main>
-<footer>Dashboard 3 · Strategic Think Tank · Public-source analysis</footer>
-</body>
-</html>
+<header class="top"><div class="topin"><a class="brand" href="index.html">AI Strategic Studio<small>تحلیل · اطلاعات · راهبرد</small></a><nav class="nav"><a href="index.html">صفحه اصلی</a><a href="#latest">آخرین مطالب</a><a href="#topics">موضوعات</a><a href="dashboard.html">داشبورد تحلیل</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="heroText"><h1>AI Strategic Studio</h1><p>وبلاگ و مرکز انتشار تحلیل‌های راهبردی، گزارش‌ها، روندهای منطقه‌ای و پژوهش‌های منتخب.</p><a class="btn green" href="dashboard.html">ورود به داشبورد تحلیل ←</a></div><div class="earth"></div><div class="orbit"></div><div class="orbit o2"></div><div class="sat s1">📰 خبر</div><div class="sat s2">🌍 منطقه</div><div class="sat s3">📊 داده</div><div class="sat s4">⚡ روند</div></section>
+<section class="latest" id="latest"><h2>آخرین مطالب</h2><div class="posts"><article class="post"><div class="pic"></div><div class="body"><span class="tag">تحلیل راهبردی</span><h3>روندهای مهم منطقه و جهان</h3><p>مروری ساختاریافته بر تحولات سیاسی، اقتصادی، امنیتی و انرژی و پیوند میان روندهای اصلی.</p><a class="btn" href="dashboard.html">مشاهده تحلیل</a></div></article><article class="post"><div class="pic"></div><div class="body"><span class="tag">پژوهش</span><h3>منابع و گزارش‌های منتخب</h3><p>جمع‌آوری و دسته‌بندی منابع رسمی، دانشگاهی، پژوهشی و رسانه‌ای مرتبط.</p><a class="btn" href="dashboard.html">منابع</a></div></article><article class="post"><div class="pic"></div><div class="body"><span class="tag">گزارش</span><h3>خروجی برای انتشار</h3><p>گزارش‌های قابل تبدیل به PDF، Word و متن کوتاه برای شبکه‌های اجتماعی.</p><a class="btn" href="dashboard.html">تولید گزارش</a></div></article></div></section>
+<section id="topics"><h2 class="sectionTitle">موضوعات اصلی</h2><div class="features"><div class="feature"><h3>🧠 تحلیل سیاسی و راهبردی</h3><p>بررسی روندها، بازیگران، سناریوها و پیامدهای احتمالی بر اساس منابع قابل استناد.</p></div><div class="feature"><h3>💹 اقتصاد و انرژی</h3><p>پایش بازارها، انرژی، تجارت و متغیرهای اقتصادی مؤثر بر تحولات منطقه‌ای.</p></div><div class="feature"><h3>🗺 نقشه و اینفوگرافیک</h3><p>نمایش بصری داده‌ها و تحولات برای استفاده در گزارش و انتشار عمومی.</p></div><div class="feature"><h3>🌐 منابع چندزبانه</h3><p>ورودی و خروجی فارسی، عربی و انگلیسی و سازمان‌دهی منابع رسمی و غیررسمی با ذکر منبع.</p></div></div></section>
+<div class="footer">AI Strategic Studio · صفحه اصلی وبلاگ · <a href="dashboard.html">ورود به داشبورد</a></div>
+</main></body></html>
